@@ -1,89 +1,137 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ravinder Ozha | Portfolio</title>
+<title>Ravinder Ozha | AI Founder</title>
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:Arial, Helvetica, sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#0f172a;
+background:#050816;
 color:white;
 line-height:1.6;
 }
 
-header{
-padding:60px 20px;
+/* Navbar */
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:18px 40px;
+background:rgba(0,0,0,0.75);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
+
+nav h2{
+color:#38bdf8;
+font-size:24px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:15px;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+/* Hero */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-background:linear-gradient(135deg,#1e293b,#0f172a);
+padding:20px;
+background:linear-gradient(135deg,#050816,#0f172a,#111827);
 }
 
-header h1{
-font-size:42px;
-margin-bottom:10px;
+.hero h1{
+font-size:58px;
+margin-bottom:15px;
+animation:fadeUp 1s ease;
 }
 
-header p{
-font-size:20px;
+.hero span{
+color:#38bdf8;
+}
+
+.hero p{
+font-size:22px;
 color:#cbd5e1;
+max-width:800px;
+animation:fadeUp 1.4s ease;
 }
 
 .btn{
 display:inline-block;
-margin-top:20px;
-padding:12px 25px;
+margin-top:30px;
+padding:14px 30px;
 background:#38bdf8;
 color:#000;
-text-decoration:none;
-border-radius:8px;
 font-weight:bold;
+text-decoration:none;
+border-radius:10px;
+transition:0.3s;
 }
 
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* Sections */
 section{
-padding:50px 20px;
-max-width:1100px;
+padding:90px 20px;
+max-width:1200px;
 margin:auto;
 }
 
 h2{
-font-size:32px;
-margin-bottom:25px;
+font-size:38px;
+margin-bottom:30px;
 color:#38bdf8;
-}
-
-.about{
-font-size:18px;
-color:#e2e8f0;
+text-align:center;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
 }
 
 .card{
-background:#1e293b;
+background:#111827;
 padding:25px;
-border-radius:14px;
-transition:0.3s;
+border-radius:18px;
+box-shadow:0 0 18px rgba(56,189,248,0.08);
+transition:0.35s;
 }
 
 .card:hover{
-transform:translateY(-6px);
-background:#334155;
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(56,189,248,0.25);
 }
 
 .card h3{
 margin-bottom:12px;
-color:#f8fafc;
+font-size:22px;
 }
 
 .card p{
@@ -91,64 +139,61 @@ color:#cbd5e1;
 font-size:15px;
 }
 
-footer{
+.about{
+max-width:900px;
+margin:auto;
 text-align:center;
-padding:30px;
-background:#1e293b;
-margin-top:40px;
+font-size:20px;
+color:#dbeafe;
+}
+
+/* Footer */
+footer{
+padding:35px;
+text-align:center;
+background:#0f172a;
 color:#94a3b8;
 }
 
-a.project{
-color:#38bdf8;
-text-decoration:none;
-font-weight:bold;
+/* Animation */
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Ravinder Ozha</h1>
-<p>AI Vibe Coder | Rapid MVP Builder | Business + Tech Strategist</p>
-<a class="btn" href="#projects">View Projects</a>
-</header>
+<nav>
+<h2>RO</h2>
+<div>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
 
-<section>
-<h2>About Me</h2>
-<p class="about">
-I transform ideas into working products using AI-assisted development, automation,
-Python tools, dashboards, business systems, and web projects.
-Focused on speed, creativity, and practical execution.
-</p>
+<section class="hero">
+<h1>Ravinder <span>Ozha</span></h1>
+<p>AI Vibe Coder • Rapid MVP Builder • Business + Tech Founder Mindset</p>
+<a href="#projects" class="btn">Explore My Work</a>
 </section>
 
-<section>
-<h2>Skills</h2>
-<div class="grid">
-
-<div class="card">
-<h3>AI Assisted Coding</h3>
-<p>Rapid project building using AI tools, logic design, debugging, and execution.</p>
-</div>
-
-<div class="card">
-<h3>Python Projects</h3>
-<p>Turtle graphics, automation tools, desktop utilities, simulations.</p>
-</div>
-
-<div class="card">
-<h3>Web Projects</h3>
-<p>HTML, CSS, JavaScript landing pages, dashboards, calculators, live demos.</p>
-</div>
-
-<div class="card">
-<h3>Business Systems</h3>
-<p>Startup MVPs, workflows, monetization models, scalable product ideas.</p>
-</div>
-
-</div>
+<section id="about">
+<h2>About Me</h2>
+<p class="about">
+I transform ideas into real products using AI-assisted development,
+automation systems, Python tools, business workflows, and modern web solutions.
+Focused on speed, creativity, and execution.
+</p>
 </section>
 
 <section id="projects">
@@ -157,43 +202,67 @@ Focused on speed, creativity, and practical execution.
 <div class="grid">
 
 <div class="card">
-<h3>Rainy Traffic Highway Simulator</h3>
-<p>Animated traffic highway scene with rain, cars, birds and movement effects.</p>
-<a class="project" href="#">Live Demo</a>
-</div>
-
-<div class="card">
 <h3>Jarvis AI Assistant</h3>
-<p>Voice-controlled desktop assistant with commands, websites, productivity tools.</p>
-<a class="project" href="#">GitHub Repo</a>
+<p>Voice-controlled desktop assistant with useful commands, apps and automation tools.</p>
 </div>
 
 <div class="card">
-<h3>Doraemon Python Graphics</h3>
-<p>Enhanced turtle graphics project with funny eye animation and remastered code.</p>
-<a class="project" href="#">GitHub Repo</a>
+<h3>Rainy Highway Simulator</h3>
+<p>Animated live highway simulation with traffic, rain, movement and realism.</p>
 </div>
 
 <div class="card">
-<h3>Healthcare Revenue AI Ideas</h3>
-<p>RCM, AR follow-up, claim leakage analysis, startup concepts.</p>
-<a class="project" href="#">More</a>
+<h3>Doraemon Graphics Lab</h3>
+<p>Enhanced Python Turtle visual graphics with custom animations and remastering.</p>
+</div>
+
+<div class="card">
+<h3>Healthcare Revenue AI</h3>
+<p>Ideas and systems to reduce revenue leakage in US healthcare billing workflows.</p>
 </div>
 
 </div>
 </section>
 
-<section>
-<h2>Contact</h2>
+<section id="skills">
+<h2>Core Skills</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>AI Coding</h3>
+<p>Rapid prototyping, debugging, product execution using AI tools.</p>
+</div>
+
+<div class="card">
+<h3>Python</h3>
+<p>Automation, utilities, simulations, desktop tools, data workflows.</p>
+</div>
+
+<div class="card">
+<h3>Web Build</h3>
+<p>HTML, CSS, JavaScript landing pages and live product demos.</p>
+</div>
+
+<div class="card">
+<h3>Business Strategy</h3>
+<p>MVP thinking, monetization, systems, startup execution mindset.</p>
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<h2>Let's Build</h2>
 <p class="about">
-GitHub: github.com/ravinderozha<br>
-Email: ravinderozha@gmail.com<br>
-LinkedIn: linkedin.com/ravinderozha
+GitHub: github.com/ravinderozha<br><br>
+Email: ravinderozha@gmail.com<br><br>
+Open to projects, ideas, partnerships and opportunities.
 </p>
 </section>
 
 <footer>
-© 2026 Ravinder Ozha | Built with Vision + AI
+© 2026 Ravinder Ozha • Built with Vision + AI
 </footer>
 
 </body>
